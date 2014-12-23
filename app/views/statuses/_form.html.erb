@@ -11,10 +11,18 @@
     </div>
   <% end %>
 
-   <%= f.input :user_id %>
-   <%= f.input  :content %>
+  <div class="control-group">
+    <div class="control">
+      <%= f.input :user_id %>
+  </div>
+
+  <div class="control-group">
+    <div class="control">
+      <%= f.input :content %>
+    </div>
+  </div>
+
    <div class="form-actions">
     <%= f.button :submit %>
   </div>
-
 <% end %>

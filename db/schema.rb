@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213121922) do
+ActiveRecord::Schema.define(version: 20141223140428) do
 
   create_table "statuses", force: true do |t|
     t.text     "content"
@@ -26,8 +26,6 @@ ActiveRecord::Schema.define(version: 20141213121922) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "profile_name"
-    t.string   "gender"
-    t.datetime "date_of_birth"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
