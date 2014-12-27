@@ -1,2 +1,6 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<div class="page-header">
+  <h1><%= @user.full_name %></h2>
+    <% statuses.each do |status| %>
+    <%= status.content %>
+    <% end %>
+</div>
