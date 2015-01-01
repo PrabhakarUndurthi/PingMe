@@ -17,4 +17,5 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     assert_redirected_to  '/'
   end
+
 end
