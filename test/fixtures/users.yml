@@ -8,4 +8,10 @@ steve:
   first_name: "steve"
   last_name: "huffman"
   email: "steve@gmail.com"
-  profile_name: "hsteve"  
+  profile_name: "hsteve"
+
+mark:
+  first_name: "mark"
+  last_name: "zuckerberg"
+  email: "mark@gmail.com"
+  profile_name: "markz"

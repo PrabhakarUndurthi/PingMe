@@ -63,6 +63,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
 
+
   test "should show status" do
     get :show, id: @status
     assert_response :success

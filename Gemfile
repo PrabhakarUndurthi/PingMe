@@ -16,3 +16,8 @@ gem 'spring',        group: :development
 
 gem 'devise', '~> 3.4.1'
 gem 'simple_form'
+
+
+group :test do
+  gem 'shoulda'
+end
