@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     get 'edit',      to: 'devise/registrations#edit', as: :edit
   end
 
+  resources :user_friendships
+
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
 
