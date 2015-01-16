@@ -9,4 +9,9 @@ class UserFriendshipTest < ActiveSupport::TestCase
       UserFriendship.create user: users(:prabhakar), friend: users(:mark)
     end
   end
+
+  test "creating friendship with user_id and friend_id works" do
+    UserFriendship.create user_id: users(:prabhakar).id , friend_id: users(:steve).id
+    assert users(:prabhakar).friends.include?(users(:steve)) 
+  end
 end
