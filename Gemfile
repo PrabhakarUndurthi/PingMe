@@ -21,3 +21,11 @@ gem 'simple_form'
 group :test do
   gem 'shoulda'
 end
+
+group :development do
+  gem 'pry-rails'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
