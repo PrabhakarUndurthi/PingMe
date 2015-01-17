@@ -24,17 +24,17 @@ class UserFriendshipsControllerTest < ActionController::TestCase
       end
 
       should "display the friends name" do
-        get :new, friend_id: users(:steve).id
+        get :new, friend_id: users(:steve)
         assert_match /#{users(:steve).full_name}/, response.body 
       end
 
       should "assign a new user_friendship" do
-        get :new, friend_id: users(:steve).id
+        get :new, friend_id: users(:steve)
         assert assigns(:user_friendship)
       end
 
       should "assign a new user friendship to the correct friend" do
-        get :new, friend_id: users(:steve).id
+        get :new, friend_id: users(:steve)
         assert_equal users(:steve), assigns(:user_friendship).friend
       end
 
@@ -46,6 +46,11 @@ class UserFriendshipsControllerTest < ActionController::TestCase
       should "render 404 if the friend is not found" do
         get :new, friend_id: 'invalid'
         assert_response :not_found
+      end
+
+      should "ask if you realy want to be friend with that user " do
+        get :new, friend_id: users(:steve)
+        assert_match /Do you really want to be frined with #{users(:steve).full_name} ?/, response.body
       end
     end 
   end

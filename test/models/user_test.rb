@@ -63,4 +63,8 @@ class UserTest < ActiveSupport::TestCase
     users(:prabhakar).friends.reload
     users(:prabhakar).friends.include?(users(:steve))
   end
+
+  test "calling to_param on a profile_name should return the profle" do
+    assert_equal "hsteve", users(:steve).to_param
+  end
 end

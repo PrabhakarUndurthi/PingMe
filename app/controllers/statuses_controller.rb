@@ -5,7 +5,7 @@ class StatusesController < ApplicationController
   # GET /statuses
   # GET /statuses.json
   def index
-    @statuses = current_user.statuses.all
+    @statuses = Status.all
   end
 
   # GET /statuses/1
