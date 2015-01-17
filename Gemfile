@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'byebug', '~> 3.5.1'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
@@ -22,10 +23,13 @@ group :test do
   gem 'shoulda'
 end
 
-group :development do
+group :development, :test  do
   gem 'pry-rails'
   gem 'pry'
   gem 'pry-byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry-remote'
+  gem 'pry-stack_explorer'
+  gem 'debugger'
 end
